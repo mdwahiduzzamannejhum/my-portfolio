@@ -1,0 +1,28 @@
+<svg width="860" height="540" viewBox="0 0 860 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1A2B"/>
+      <stop offset="1" stop-color="#1A2E46"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="90" y1="80" x2="760" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4B4"/>
+      <stop offset="1" stop-color="#FF8A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="540" rx="24" fill="url(#bg)"/>
+  <rect x="44" y="52" width="772" height="436" rx="18" fill="#0C1728" stroke="#274163"/>
+  <rect x="72" y="96" width="224" height="16" rx="8" fill="#1E3552"/>
+  <rect x="72" y="130" width="332" height="14" rx="7" fill="#284468"/>
+  <rect x="72" y="156" width="292" height="14" rx="7" fill="#284468"/>
+  <rect x="72" y="182" width="348" height="14" rx="7" fill="#2D4D74"/>
+  <rect x="446" y="96" width="342" height="230" rx="14" fill="#111F34" stroke="#2D4D74"/>
+  <path d="M480 280L546 226L610 268L684 182L754 236" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="546" cy="226" r="8" fill="#00D4B4"/>
+  <circle cx="610" cy="268" r="8" fill="#FF8A00"/>
+  <circle cx="684" cy="182" r="8" fill="#00D4B4"/>
+  <rect x="72" y="240" width="336" height="24" rx="12" fill="#1F3552"/>
+  <rect x="72" y="280" width="296" height="24" rx="12" fill="#29456A"/>
+  <rect x="72" y="320" width="224" height="24" rx="12" fill="#32567F"/>
+  <rect x="446" y="350" width="162" height="42" rx="12" fill="#00D4B4" fill-opacity="0.85"/>
+  <rect x="626" y="350" width="162" height="42" rx="12" fill="#FF8A00" fill-opacity="0.85"/>
+</svg>

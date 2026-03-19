@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">International award illustration</title>
+  <desc id="desc">Stylized globe and ribbon for an international award.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#112126"/>
+      <stop offset="100%" stop-color="#0e1723"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="24" fill="url(#bg)"/>
+  <circle cx="160" cy="96" r="48" fill="#123b43" stroke="#19d3b4" stroke-width="4"/>
+  <ellipse cx="160" cy="96" rx="20" ry="48" fill="none" stroke="#6ff7df" stroke-width="3"/>
+  <ellipse cx="160" cy="96" rx="48" ry="18" fill="none" stroke="#6ff7df" stroke-width="3"/>
+  <path d="M112 96h96M160 48c14 14 20 30 20 48s-6 34-20 48c-14-14-20-30-20-48s6-34 20-48z" fill="none" stroke="#6ff7df" stroke-width="3"/>
+  <path d="M145 140l15 10 15-10v28l-15-8-15 8z" fill="#19d3b4"/>
+  <circle cx="160" cy="138" r="10" fill="#fffbef" stroke="#19d3b4" stroke-width="3"/>
+</svg>

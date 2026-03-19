@@ -1,0 +1,35 @@
+Md. Wahiduzzaman Nejhum
+Competitive Programmer and Software Developer
+
+Email: nejhum@email.com
+GitHub: github.com/nejhum
+
+Profile
+I solve algorithmic problems and build efficient software with a focus on performance, clarity, and reliability.
+
+Skills
+- C++
+- Python
+- Data Structures and Algorithms
+- Web Development
+
+Experience
+- Competitive Programming Mentor (2024-Present)
+- Freelance Web Developer (2023-Present)
+
+Education
+- BSc in Computer Science and Engineering (2021-2025)
+
+Achievements
+- Top 5% in multiple online contests
+- 300+ algorithmic problems solved
+- 10+ projects delivered
+
+Projects
+- Algorithm Visualizer
+- Contest Tracker
+- Portfolio Website
+
+Publications
+- Greedy Strategies in Contest Programming (2025)
+- Fast I/O and Runtime Discipline (2024)

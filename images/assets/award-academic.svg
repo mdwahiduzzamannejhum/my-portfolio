@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Academic honor illustration</title>
+  <desc id="desc">Stylized academic medal and laurel illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2334"/>
+      <stop offset="100%" stop-color="#0f1726"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="24" fill="url(#bg)"/>
+  <circle cx="160" cy="98" r="52" fill="#111827" stroke="#334155"/>
+  <circle cx="160" cy="98" r="36" fill="url(#gold)"/>
+  <path d="M160 72l8 16 18 3-13 13 3 18-16-8-16 8 3-18-13-13 18-3z" fill="#fff7cc"/>
+  <path d="M126 44c-18 8-30 24-35 44" fill="none" stroke="#f5c218" stroke-width="8" stroke-linecap="round"/>
+  <path d="M194 44c18 8 30 24 35 44" fill="none" stroke="#f5c218" stroke-width="8" stroke-linecap="round"/>
+  <path d="M126 142c-18-8-30-24-35-44" fill="none" stroke="#8fbf63" stroke-width="8" stroke-linecap="round"/>
+  <path d="M194 142c18-8 30-24 35-44" fill="none" stroke="#8fbf63" stroke-width="8" stroke-linecap="round"/>
+  <rect x="146" y="136" width="12" height="30" rx="6" fill="#f59e0b"/>
+  <rect x="162" y="136" width="12" height="30" rx="6" fill="#ffd54f"/>
+</svg>

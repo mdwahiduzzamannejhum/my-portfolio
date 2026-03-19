@@ -1,0 +1,21 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="avatarBg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 330) rotate(90) scale(310)">
+      <stop stop-color="#1B3E76"/>
+      <stop offset="1" stop-color="#0A1B35"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="180" y1="130" x2="560" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6DD8FF"/>
+      <stop offset="1" stop-color="#7C97FF"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="360" cy="360" r="300" fill="url(#avatarBg)"/>
+  <circle cx="360" cy="360" r="298" stroke="url(#accent)" stroke-opacity="0.45" stroke-width="4"/>
+
+  <circle cx="360" cy="286" r="84" fill="#E7EEF8"/>
+  <path d="M190 510C190 416.111 266.111 340 360 340C453.889 340 530 416.111 530 510V572H190V510Z" fill="#E7EEF8"/>
+
+  <path d="M134 414C152 308 238 226 344 218" stroke="#72D9FF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.42"/>
+  <path d="M584 436C570 324 490 240 386 220" stroke="#88A6FF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.35"/>
+</svg>

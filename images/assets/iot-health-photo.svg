@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">IoT Health Tracker project photo</title>
+  <desc id="desc">A photo style visual showing wearable sensor data with heart rate and body temperature monitoring on mobile dashboard.</desc>
+  <style>
+    .ecg-line {
+      stroke-dasharray: 24 8;
+      animation: ecgShift 1.6s linear infinite;
+    }
+
+    .live-dot {
+      transform-origin: center;
+      animation: livePulse 1.2s ease-in-out infinite;
+    }
+
+    .signal-bar {
+      transform-box: fill-box;
+      transform-origin: left center;
+      animation: signalFlow 2.1s ease-in-out infinite;
+    }
+
+    .signal-bar.bar-2 {
+      animation-delay: 0.35s;
+    }
+
+    .signal-bar.bar-3 {
+      animation-delay: 0.7s;
+    }
+
+    .status-chip {
+      animation: chipGlow 1.8s ease-in-out infinite;
+    }
+
+    @keyframes ecgShift {
+      from {
+        stroke-dashoffset: 0;
+      }
+
+      to {
+        stroke-dashoffset: -64;
+      }
+    }
+
+    @keyframes livePulse {
+      0%,
+      100% {
+        opacity: 0.6;
+        transform: scale(0.9);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.22);
+      }
+    }
+
+    @keyframes signalFlow {
+      0%,
+      100% {
+        opacity: 0.55;
+        transform: scaleX(0.58);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes chipGlow {
+      0%,
+      100% {
+        opacity: 0.85;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1526"/>
+      <stop offset="100%" stop-color="#050b15"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c3b58"/>
+      <stop offset="100%" stop-color="#11253f"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#15dfb2"/>
+      <stop offset="100%" stop-color="#3cc0ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+
+  <circle cx="170" cy="100" r="90" fill="#1dd5c01f"/>
+  <circle cx="840" cy="440" r="120" fill="#2da8ff1f"/>
+
+  <rect x="80" y="70" width="800" height="400" rx="26" fill="#0c1628" stroke="#2d425e" stroke-width="2"/>
+  <rect x="105" y="95" width="750" height="350" rx="20" fill="url(#screen)"/>
+
+  <rect x="130" y="125" width="360" height="140" rx="16" fill="#0f2a3f" stroke="#2e5a7f"/>
+  <text x="150" y="165" fill="#8edcff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Heart Rate</text>
+  <text x="150" y="218" fill="#f8fbff" font-family="Arial, sans-serif" font-size="54" font-weight="700">86 BPM</text>
+  <path class="ecg-line" d="M140 246 L190 246 L205 222 L225 272 L245 235 L275 235 L295 252 L340 252 L358 232 L380 272 L405 252 L470 252" fill="none" stroke="url(#pulse)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="130" y="290" width="360" height="130" rx="16" fill="#0f2a3f" stroke="#2e5a7f"/>
+  <text x="150" y="330" fill="#8edcff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Body Temperature</text>
+  <text x="150" y="382" fill="#f8fbff" font-family="Arial, sans-serif" font-size="52" font-weight="700">37.1 C</text>
+
+  <rect x="520" y="125" width="310" height="295" rx="24" fill="#0f2238" stroke="#2f5275" stroke-width="2"/>
+  <rect x="558" y="162" width="232" height="210" rx="22" fill="#061326"/>
+  <rect x="574" y="185" width="200" height="34" rx="10" fill="#123153"/>
+  <text x="588" y="208" fill="#94e2ff" font-family="Arial, sans-serif" font-size="16">Realtime Alerts</text>
+  <rect x="574" y="231" width="200" height="126" rx="12" fill="#0d2340"/>
+  <text x="586" y="260" fill="#d8ebff" font-family="Arial, sans-serif" font-size="14">Sensor Node: ESP8266</text>
+  <text x="586" y="286" fill="#d8ebff" font-family="Arial, sans-serif" font-size="14">Connection: Stable</text>
+  <text x="586" y="312" fill="#15dfb2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Status: Normal</text>
+  <rect x="586" y="328" width="176" height="18" rx="9" fill="#11395a"/>
+  <rect class="signal-bar bar-1" x="586" y="328" width="56" height="18" rx="9" fill="url(#pulse)"/>
+  <rect class="signal-bar bar-2" x="644" y="328" width="52" height="18" rx="9" fill="url(#pulse)"/>
+  <rect class="signal-bar bar-3" x="698" y="328" width="36" height="18" rx="9" fill="url(#pulse)"/>
+
+  <rect class="status-chip" x="574" y="141" width="154" height="16" rx="8" fill="rgba(21,223,178,0.12)" stroke="rgba(21,223,178,0.45)"/>
+  <circle class="live-dot" cx="590" cy="149" r="4" fill="#15dfb2"/>
+  <text x="602" y="153" fill="#9be9d7" font-family="Arial, sans-serif" font-size="11" font-weight="700">LIVE STREAM</text>
+
+  <circle cx="308" cy="84" r="20" fill="#22e5c9" filter="url(#softGlow)"/>
+  <circle cx="734" cy="414" r="24" fill="#2ca9ff" filter="url(#softGlow)"/>
+  <text x="130" y="438" fill="#8aa7c9" font-family="Arial, sans-serif" font-size="16">Arduino  |  ESP8266  |  Firebase  |  Android</text>
+</svg>
