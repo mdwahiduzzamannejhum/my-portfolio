@@ -68,15 +68,31 @@ const certLightbox = document.getElementById("certLightbox");
 const certLightboxImage = document.getElementById("certLightboxImage");
 const certLightboxCaption = document.getElementById("certLightboxCaption");
 
+const getSiteBasePath = () => {
+	if (!window.location.hostname.endsWith("github.io")) {
+		return "/";
+	}
+
+	const segments = window.location.pathname.split("/").filter(Boolean);
+	if (!segments.length) {
+		return "/";
+	}
+
+	return `/${segments[0]}/`;
+};
+
 if (certGrid) {
+	const siteBasePath = getSiteBasePath();
+	const certAssetPath = (fileName) => `${siteBasePath}images/Certificate/${fileName}`;
+
 	const certificateAssets = [
-		...Array.from({ length: 34 }, (_, i) => ({ number: i + 1, path: `images/Certificate/${i + 1}.png` })),
-		{ number: 36, path: "images/Certificate/36.png" },
-		{ number: 37, path: "images/Certificate/37.png" },
-		{ number: 38, path: "images/Certificate/38.png" },
-		{ number: 39, path: "images/Certificate/39.jpg" },
-		{ number: 40, path: "images/Certificate/40.jpg" },
-		{ number: 41, path: "images/Certificate/41.png" }
+		...Array.from({ length: 34 }, (_, i) => ({ number: i + 1, path: certAssetPath(`${i + 1}.png`) })),
+		{ number: 36, path: certAssetPath("36.png") },
+		{ number: 37, path: certAssetPath("37.png") },
+		{ number: 38, path: certAssetPath("38.png") },
+		{ number: 39, path: certAssetPath("39.jpg") },
+		{ number: 40, path: certAssetPath("40.jpg") },
+		{ number: 41, path: certAssetPath("41.png") }
 	];
 
 	const commonCertificateTitle = "Professional Certificate";
