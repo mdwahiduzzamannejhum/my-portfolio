@@ -70,13 +70,13 @@ const certLightboxCaption = document.getElementById("certLightboxCaption");
 
 if (certGrid) {
 	const certificateAssets = [
-		...Array.from({ length: 34 }, (_, i) => ({ number: i + 1, path: `../images/Certificate/${i + 1}.png` })),
-		{ number: 36, path: "../images/Certificate/36.png" },
-		{ number: 37, path: "../images/Certificate/37.png" },
-		{ number: 38, path: "../images/Certificate/38.png" },
-		{ number: 39, path: "../images/Certificate/39.jpg" },
-		{ number: 40, path: "../images/Certificate/40.jpg" },
-		{ number: 41, path: "../images/Certificate/41.png" }
+		...Array.from({ length: 34 }, (_, i) => ({ number: i + 1, path: `images/Certificate/${i + 1}.png` })),
+		{ number: 36, path: "images/Certificate/36.png" },
+		{ number: 37, path: "images/Certificate/37.png" },
+		{ number: 38, path: "images/Certificate/38.png" },
+		{ number: 39, path: "images/Certificate/39.jpg" },
+		{ number: 40, path: "images/Certificate/40.jpg" },
+		{ number: 41, path: "images/Certificate/41.png" }
 	];
 
 	const commonCertificateTitle = "Professional Certificate";
@@ -110,12 +110,22 @@ if (certGrid) {
 					<span class="cert-year">#${serial}</span>
 				</div>
 				<a class="cert-preview" href="${item.path}" data-cert-title="${escapedTitle}">
-					<img src="${item.path}" alt="${item.title} preview (${displayName})">
+					<img src="${item.path}" alt="${item.title} preview (${displayName})" loading="lazy" decoding="async">
 				</a>
 				<a class="cert-link" href="${item.path}" data-cert-title="${escapedTitle}">View</a>
 			</article>`;
 		})
 		.join("");
+
+	certGrid.querySelectorAll(".cert-preview img").forEach((img) => {
+		img.addEventListener("error", () => {
+			const preview = img.closest(".cert-preview");
+			if (!preview || preview.classList.contains("is-missing")) return;
+
+			preview.classList.add("is-missing");
+			preview.innerHTML = '<span class="cert-missing" aria-hidden="true">Preview unavailable</span>';
+		});
+	});
 
 	if (certLightbox && certLightboxImage && certLightboxCaption) {
 		const closeCertificatePreview = () => {
